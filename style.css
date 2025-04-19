@@ -1,0 +1,268 @@
+/************************** Global ***************************/
+
+:root {
+    --black: hsl(0, 0%, 7%);
+    --dark-blue: hsl(219, 29%, 14%);
+    --white: hsl(0, 0%, 100%);
+
+    --grey-100: hsl(214, 17%, 92%);
+    --grey-200: hsl(0, 0%, 81%);
+    --grey-400: hsl(224, 10%, 45%);
+    --grey-500: hsl(217, 19%, 35%);
+
+    --purple-50: hsl(260, 100%, 95%);
+    --purple-300: hsl(264, 82%, 80%);
+    --purple500: hsl(263, 55%, 52%);
+}
+
+
+.text-preset-1 {
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 1.2;
+}
+
+.text-preset-2 {
+    /*standard set in body*/
+    font-family: "Barlow Semi Condensed", sans-serif;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 13px;
+    line-height: 1.1;
+    letter-spacing: 0;
+}
+
+.text-preset-3 {
+    line-height: 1.4;
+}
+
+.text-preset-4 {
+    font-size: 11px;
+}
+
+
+
+/********************* Standard Resets ***********************/
+
+
+*,
+*::before,
+*::after {
+    /* Ensures padding & border remain within element's size */
+    box-sizing: border-box;
+}
+
+* {
+    /* Remove browser's default margin, padding, and font settings */
+    margin: 0;
+    padding: 0;
+    /* Ensures forms, buttons, etc., match the document font */
+    font: inherit;
+}
+
+img,
+picture,
+svg,
+video {
+    /* Prevents inline spacing issues */
+    display: block;
+    /* Ensures media scales within parent container */
+    max-width: 100%;
+}
+
+/********************** Test & Debug *************************/
+
+/* * {
+    outline: 1px solid green;
+    background-color: hsl(155, 68%, 71%);
+} */
+
+/*************************************************************/
+
+body {
+    background-color: var(--grey-100);
+
+    display: grid;
+    place-items: center;
+
+    /* text-preset-2 */
+    font-family: "Barlow Semi Condensed", sans-serif;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 13px;
+    line-height: 1.1;
+    letter-spacing: 0;
+}
+
+.wrapper {
+    max-width: 305px;
+    display: grid;
+    place-items: center;
+    gap: 32px;
+}
+
+article {
+    border-radius: 8px;
+    padding: 32px;
+}
+
+
+/*** t1 ****/
+#t1 {
+    background-color: var(--purple500);
+    color: var(--white);
+}
+
+#t1>.user-role,
+#t1>.detailed-quote {
+    color: var(--purple-50);
+}
+
+
+/*** t2 ****/
+#t2 {
+    background-color: var(--grey-500);
+    color: var(--white);
+}
+
+#t2>.user-role,
+#t2>.detailed-quote {
+    color: var(--grey-100);
+}
+
+/*** t3 ****/
+#t3 {
+    background-color: var(--white);
+    color: var(--grey-500);
+}
+
+#t3>.user-role,
+#t3>.detailed-quote {
+    color: var(--grey-400);
+}
+
+
+/*** t4 ****/
+#t4 {
+    background-color: var(--dark-blue);
+    color: var(--white)
+}
+
+#t4>.top-quote {
+    color: var(--grey-200);
+}
+
+#t4>.detailed-quote {
+    color: var(--grey-100);
+}
+
+
+/*** t5 ****/
+#t5 {
+    background-color: var(--white);
+    color: var(--grey-500);
+}
+
+#t5>.user-role,
+#t5>.detailed-quote {
+    color: var(--grey-400);
+}
+
+
+
+.user-pic {
+    border-radius: 50%;
+}
+
+.user-role {
+    /*text-preset-4*/
+    font-size: 11px;
+}
+
+.top-quote {
+    /*text-preset-1*/
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 1.2;
+}
+
+.detailed-quote {
+    /*text-preset-1*/
+    line-height: 1.4;
+}
+
+
+/* footer {
+    margin-top: 1rem;
+    position: fixed;
+    bottom: 1rem;
+    left: 0;
+    right: 0;
+    text-align: center;
+} */
+
+.attribution {
+    font-size: 0.6875rem;
+    text-align: center;
+}
+
+.attribution a:hover,
+.attribution a:focus {
+    color: black;
+    outline: none;
+}
+
+/************************ Responsive *************************/
+
+/* Tablet (min-width: 768px) */
+@media (min-width: 768px) {
+
+    .someclass {
+        font-size: 14px;
+        letter-spacing: 0;
+        min-width: 384px;
+        padding: 40px;
+    }
+}
+
+/* Desktop (min-width: 992px) */
+@media (min-width: 992px) {
+
+    .someclass {
+        font-size: 14px;
+        letter-spacing: 0;
+        min-width: 384px;
+        padding: 40px;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.grid-wrapper {
+    display: grid;
+
+}
+
+
+.attribution {
+    font-size: 11px;
+    text-align: center;
+}
+
+.attribution a {
+    color: hsl(228, 45%, 44%);
+}
