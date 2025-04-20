@@ -13,12 +13,14 @@
     --purple-50: hsl(260, 100%, 95%);
     --purple-300: hsl(264, 82%, 80%);
     --purple500: hsl(263, 55%, 52%);
-}
 
+    --bg-color: hsl(300, 5%, 96%);
+    --shadow-color: hsla(217, 19%, 35%, 0.25);
+}
 
 .text-preset-1 {
     font-weight: 600;
-    font-size: 20px;
+    font-size: 1.25rem;
     line-height: 1.2;
 }
 
@@ -27,7 +29,7 @@
     font-family: "Barlow Semi Condensed", sans-serif;
     font-style: normal;
     font-weight: 500;
-    font-size: 13px;
+    font-size: 0.8125rem;
     line-height: 1.1;
     letter-spacing: 0;
 }
@@ -37,13 +39,10 @@
 }
 
 .text-preset-4 {
-    font-size: 11px;
+    font-size: 0.6875rem;
 }
 
-
-
 /********************* Standard Resets ***********************/
-
 
 *,
 *::before,
@@ -70,40 +69,69 @@ video {
     max-width: 100%;
 }
 
-/********************** Test & Debug *************************/
-
-/* * {
-    outline: 1px solid green;
-    background-color: hsl(155, 68%, 71%);
-} */
-
 /*************************************************************/
 
 body {
-    background-color: var(--grey-100);
+    background-color: var(--bg-color);
 
     display: grid;
     place-items: center;
+    min-height: 100dvh;
 
     /* text-preset-2 */
     font-family: "Barlow Semi Condensed", sans-serif;
     font-style: normal;
     font-weight: 500;
-    font-size: 13px;
+    font-size: 0.8125rem;
     line-height: 1.1;
     letter-spacing: 0;
 }
 
 .wrapper {
-    max-width: 305px;
+    max-width: 19.0625rem;
     display: grid;
-    place-items: center;
-    gap: 32px;
+    gap: 2rem 2rem;
 }
 
 article {
-    border-radius: 8px;
-    padding: 32px;
+    border-radius: 0.5rem;
+    padding: 2rem;
+    box-shadow: 2.5rem 3.75rem 3.125rem -0.25rem var(--shadow-color);
+}
+
+.flex {
+    display: flex;
+    gap: 1.0625rem;
+    align-items: center;
+    margin-bottom: 1rem;
+}
+
+.user-name {
+    margin-bottom: 0.1875rem;
+}
+
+.user-pic {
+    border-radius: 50%;
+    max-width: 1.75rem;
+}
+
+.user-role {
+    /*text-preset-4*/
+    font-size: 0.6875rem;
+}
+
+.top-quote {
+    /*text-preset-1*/
+    font-weight: 600;
+    font-size: 1.25rem;
+    line-height: 1.2;
+    margin-bottom: 1rem;
+}
+
+.detailed-quote {
+    /*text-preset-1*/
+    line-height: 1.4;
+    
 }
 
 
@@ -118,6 +146,10 @@ article {
     color: var(--purple-50);
 }
 
+#t1 .user-pic {
+border: 2px solid var(--purple-300);
+}
+
 
 /*** t2 ****/
 #t2 {
@@ -129,6 +161,7 @@ article {
 #t2>.detailed-quote {
     color: var(--grey-100);
 }
+
 
 /*** t3 ****/
 #t3 {
@@ -156,6 +189,10 @@ article {
     color: var(--grey-100);
 }
 
+#t4 .user-pic {
+    border: 2px solid var(--purple-300);
+}
+
 
 /*** t5 ****/
 #t5 {
@@ -168,101 +205,52 @@ article {
     color: var(--grey-400);
 }
 
-
-
-.user-pic {
-    border-radius: 50%;
-}
-
-.user-role {
-    /*text-preset-4*/
-    font-size: 11px;
-}
-
-.top-quote {
-    /*text-preset-1*/
-    font-weight: 600;
-    font-size: 20px;
-    line-height: 1.2;
-}
-
-.detailed-quote {
-    /*text-preset-1*/
-    line-height: 1.4;
-}
-
-
-/* footer {
-    margin-top: 1rem;
-    position: fixed;
-    bottom: 1rem;
-    left: 0;
-    right: 0;
-    text-align: center;
-} */
-
-.attribution {
-    font-size: 0.6875rem;
-    text-align: center;
-}
-
-.attribution a:hover,
-.attribution a:focus {
-    color: black;
-    outline: none;
-}
-
 /************************ Responsive *************************/
 
-/* Tablet (min-width: 768px) */
-@media (min-width: 768px) {
+/* Tablet (min-width: 40.5rem) */
+@media (min-width: 40.5rem) {
 
-    .someclass {
-        font-size: 14px;
-        letter-spacing: 0;
-        min-width: 384px;
-        padding: 40px;
+    .wrapper {
+        max-width: 40.4375rem;
+        gap: 2rem 2rem;
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    #t1 {
+        grid-column: span 2;
+        background-image: url("./images/bg-pattern-quotation.svg");
+        background-repeat: no-repeat;
+        background-position: top right 31%;
+    }
+
+    #t4 {
+        grid-column: span 2;
+    }
+
+    #t5 {
+        grid-column: span 2;
     }
 }
 
-/* Desktop (min-width: 992px) */
-@media (min-width: 992px) {
+/* Desktop (min-width: 70rem) */
+@media (min-width: 70rem) {
 
-    .someclass {
-        font-size: 14px;
-        letter-spacing: 0;
-        min-width: 384px;
-        padding: 40px;
+    .flex {
+            gap: 1rem;
+        }
+
+    .wrapper {
+        max-width: 69.625rem;
+        gap: 1.5rem 2rem;
+        grid-template-columns: repeat(4, 1fr);
     }
-}
 
+    #t1 {
+        background-position: top right 14.2%;
+    }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-.grid-wrapper {
-    display: grid;
-
-}
-
-
-.attribution {
-    font-size: 11px;
-    text-align: center;
-}
-
-.attribution a {
-    color: hsl(228, 45%, 44%);
+    #t5 {
+        grid-column: 4;
+        grid-row: 1 / span 2;
+    }
 }
