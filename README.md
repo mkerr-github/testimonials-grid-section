@@ -29,7 +29,7 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [Add solution URL here](https://your-solution-url.com)
+- Solution URL: [https://www.frontendmentor.io/solutions/testimonials-grid-section-Lq3UCpBoXE](https://www.frontendmentor.io/solutions/testimonials-grid-section-Lq3UCpBoXE)
 - Live Site URL: [https://mkerr-github.github.io/testimonials-grid-section/](https://mkerr-github.github.io/testimonials-grid-section/)
 
 ## My process
